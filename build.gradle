@@ -1,0 +1,40 @@
+plugins {
+    id 'java'
+    id 'war'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+allprojects{
+
+    repositories {
+        mavenCentral()
+    }
+
+    apply plugin: 'java'
+
+    ext{
+        restEasyVersion = "4.5.8.Final"
+    }
+
+    dependencies {
+
+        //compile project(':rest')
+
+        compile group: 'org.flywaydb', name: 'flyway-core', version: '7.0.4'
+        compile group: 'org.postgresql', name: 'postgresql', version: '42.2.6'
+
+        compile group: 'org.eclipse.jetty', name: 'jetty-server', version: '9.4.33.v20201020'
+        compile group: 'org.eclipse.jetty', name: 'jetty-servlet', version: '9.4.33.v20201020'
+
+        compile group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.11.1'
+
+        compile group: 'com.google.inject', name: 'guice', version: '4.2.2'
+        compile group: 'com.google.inject.extensions', name: 'guice-servlet', version: '4.2.2'
+
+        compile group: 'org.glassfish.hk2', name: 'guice-bridge', version: '2.6.0'
+
+        compile group: 'javax.xml.bind', name: 'jaxb-api', version: '2.3.1'
+    }
+}

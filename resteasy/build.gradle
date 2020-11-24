@@ -1,0 +1,16 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile project(':rest')
+    compile group: 'org.jboss.resteasy', name: 'resteasy-guice', version: restEasyVersion
+    compile group: 'org.jboss.resteasy', name: 'resteasy-jackson2-provider', version: restEasyVersion
+}
