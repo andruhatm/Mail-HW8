@@ -10,11 +10,10 @@ import java.sql.Connection;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-@Path("/delete")
+@Path("/delete/{name}")
 public class DeleteProductByNameREST {
 
 	@POST
-	@Path("/{name}")
 	public Response deleteByName(@PathParam("name")String name){
 		Connection connection = Connect.connect();
 

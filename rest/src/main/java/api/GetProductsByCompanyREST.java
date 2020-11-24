@@ -14,13 +14,13 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
-@Path("/getProductsByCompany")
+@Path("/getProductsByCompany/{company}")
 public class GetProductsByCompanyREST {
 
 	@GET
-	@Path("/{company}")
 	public Response getByCompany(@PathParam("company")String company){
 
+		System.out.println(company);
 		List<Product> list = new ArrayList<>();
 
 		Connection connection = Connect.connect();

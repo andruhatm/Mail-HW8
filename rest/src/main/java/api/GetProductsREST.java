@@ -30,7 +30,7 @@ public class GetProductsREST {
 			Statement statement = connection.createStatement();
 			ResultSet rs = statement.executeQuery("select * from \"products\"");
 			while (rs.next()){
-				list.add(new Product(rs.getInt(1),rs.getString(2),rs.getString(3),rs.getInt(4)));
+				list.add(new Product(rs.getInt(1),rs.getString(2),rs.getString(4),rs.getInt(3)));
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();

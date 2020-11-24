@@ -16,7 +16,7 @@ public class RESTEasyLauncher {
 						.dataSource("jdbc:postgresql://localhost:5432/mail-lab7","postgres","кщще")
 						.locations("/db.migration")
 						.load();
-		flyway.clean();
+		//flyway.clean();
 		flyway.migrate();
 
 		final Server server = JettyServer.build();
