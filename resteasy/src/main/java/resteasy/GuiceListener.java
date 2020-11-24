@@ -27,7 +27,6 @@ public class GuiceListener extends GuiceResteasyBootstrapServletContextListener 
 			bind(ProductAddingREST.class);
 			bind(GetProductsREST.class);
 			bind(DeleteProductByNameREST.class);
-			bind(GetProductsByCompanyREST.class);
 		}
 	}
 }

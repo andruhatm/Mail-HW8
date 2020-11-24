@@ -26,6 +26,7 @@ public class SecurityHandlerBuilder {
 		list.add("/add");
 		list.add("/addProduct");
 		list.add("/delete");
+		list.add("/deleteProduct");
 		constraintMappings.addAll(constraintFullMapping(
 						bindConstraint(ROLE_MANAGER),
 						list
